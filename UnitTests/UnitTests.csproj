@@ -8,6 +8,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="XUnitInfra\Fonts\OpenSans-Regular.ttf" />
+    <None Remove="XUnitInfra\Fonts\OpenSans-Semibold.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiFont Include="XUnitInfra\Fonts\OpenSans-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </MauiFont>
+    <MauiFont Include="XUnitInfra\Fonts\OpenSans-Semibold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </MauiFont>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Maui" Version="13.0.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     <PackageReference Include="coverlet.collector" Version="6.0.4" />
