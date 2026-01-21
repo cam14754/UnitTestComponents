@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="UnitTestComponents/UnitTestComponents.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="UnitTests/UnitTests.csproj" Id="0a1366e8-3c07-4814-aa5c-825e780581c6" />
+</Solution>

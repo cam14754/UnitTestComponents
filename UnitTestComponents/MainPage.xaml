@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="UnitTestComponents.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UnitTestComponents"
+    xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+    x:DataType="local:MainPageViewModel">
+
+    <Grid
+        ColumnDefinitions="*,*,*"
+        HorizontalOptions="Fill"
+        RowDefinitions="*,*,*"
+        VerticalOptions="Fill">
+        <telerik:RadBorder
+            Margin="1"
+            Padding="5"
+            BorderColor="Black"
+            BorderThickness="2"
+            HeightRequest="200"
+            WidthRequest="350">
+            <VerticalStackLayout>
+                <Label Text="Bellow is a RadEntry" />
+                <telerik:RadEntry Text="This is an entry" />
+
+            </VerticalStackLayout>
+        </telerik:RadBorder>
+
+        <telerik:RadBorder
+            Grid.Column="1"
+            Margin="1"
+            Padding="5"
+            BorderColor="Black"
+            BorderThickness="2"
+            HeightRequest="200"
+            WidthRequest="350">
+            <VerticalStackLayout>
+                <Label Text="Bellow is a chart" />
+                <telerik:RadPieChart />
+
+            </VerticalStackLayout>
+        </telerik:RadBorder>
+
+        <telerik:RadBorder
+            Grid.Column="2"
+            Margin="1"
+            Padding="5"
+            BorderColor="Black"
+            BorderThickness="2"
+            HeightRequest="200"
+            WidthRequest="350">
+            <VerticalStackLayout>
+                <Label Text="Bellow is a Datagrid" />
+                <telerik:RadDataGrid />
+
+            </VerticalStackLayout>
+        </telerik:RadBorder>
+
+        <telerik:RadBorder
+            Grid.Row="1"
+            Margin="1"
+            Padding="5"
+            BorderColor="Black"
+            BorderThickness="2"
+            HeightRequest="200"
+            WidthRequest="350">
+            <VerticalStackLayout>
+                <Label Text="Bellow is a guage" />
+                <telerik:RadRadialGauge />
+
+            </VerticalStackLayout>
+        </telerik:RadBorder>
+
+        <telerik:RadBorder
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="1"
+            Padding="5"
+            BorderColor="Black"
+            BorderThickness="2"
+            HeightRequest="200"
+            WidthRequest="350">
+            <VerticalStackLayout>
+                <Label Text="Below is a Custom Guage" />
+                <local:CustomStaticGauge
+                    HeightRequest="200"
+                    HorizontalOptions="Center"
+                    Num="{Binding Num}"
+                    VerticalOptions="Center"
+                    WidthRequest="200" />
+
+            </VerticalStackLayout>
+        </telerik:RadBorder>
+
+        <telerik:RadBorder
+            Grid.Row="1"
+            Grid.Column="2"
+            Margin="1"
+            Padding="5"
+            BorderColor="Black"
+            BorderThickness="2"
+            HeightRequest="200"
+            WidthRequest="350">
+            <VerticalStackLayout>
+                <Label Text="Bellow is a custom maui label" />
+                <local:CustomLabel Num="{Binding Num}" />
+
+            </VerticalStackLayout>
+        </telerik:RadBorder>
+
+        <telerik:RadBorder
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="1"
+            Padding="5"
+            BorderColor="Black"
+            BorderThickness="2"
+            HeightRequest="200"
+            WidthRequest="350">
+            <VerticalStackLayout>
+                <Button Command="{Binding IncrementNumCommand}" Text="Increase Num" />
+                <Button Command="{Binding DecrementNumCommand}" Text="Decrease Num" />
+                <Label Text="Enter num below" />
+                <Entry Keyboard="Numeric" Text="{Binding Num, Mode=TwoWay}" />
+            </VerticalStackLayout>
+        </telerik:RadBorder>
+
+        <telerik:RadBorder
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="1"
+            Padding="5"
+            BorderColor="Black"
+            BorderThickness="2"
+            HeightRequest="200"
+            WidthRequest="350">
+            <VerticalStackLayout>
+                <Label Text="{Binding Num, StringFormat='Current Num: {}{0}'}" />
+            </VerticalStackLayout>
+        </telerik:RadBorder>
+    </Grid>
+
+</ContentPage>
